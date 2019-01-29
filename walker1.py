@@ -1,15 +1,15 @@
 import random
 
 class Walker(object):
-    def __init__(self,x,y,shade):
+    def __init__(self,x,y,c):
         self.x = x
         self.y = y
-        self.shade = shade
+        self.c = c
         
     def display(self):
         noStroke()
-        fill(self.shade);
-        ellipse(self.x,self.y,5,5);
+        fill(self.c)
+        ellipse(self.x,self.y,5,5)
         
     def step(self):
         self.x = constrain(self.x,0,width-1)  ## keeps it on the board
